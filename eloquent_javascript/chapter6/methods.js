@@ -28,5 +28,3 @@ bmw.type("automatic"); // arguement for the function type
 
 let mercedes = { brand: "Mercedes", type }; // a object variable that holds a property string value and a method property value
 mercedes.type("manual"); // arguement for the function type
-
-// Kingsley help with git submodules and also django registartion that automatically logs a user in, countBy array method

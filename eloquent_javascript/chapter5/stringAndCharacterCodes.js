@@ -22,4 +22,18 @@ console.log(emojis.codePointAt(0)); // the codePointAt function in javascript gi
 // countBy() method
 // findIndex()
 
-// ask Kingsley for help with countBy method
+function countBy(items, groupNmae) {
+  let counts = [];
+  for (let item of items) {
+    let name = groupNmae(item);
+    let known = counts.findIndex((c) => c.name == name);
+    if (known == -1) {
+      counts.push({ name, count: 1 });
+    } else {
+      counts[known].count++;
+    }
+  }
+  return counts;
+}
+
+console.log(countBy([1, 3, 3, 3, 5], (n) => n > 2));
