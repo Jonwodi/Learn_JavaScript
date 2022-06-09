@@ -3,10 +3,23 @@
 
 // The Sum of a Range
 // function that returns a range of number from start to the end
-let range = (start, end) => {
-  numberList = [];
-  for (let number = start; number <= end; number++) {
+// let range = (start, end) => {
+//   numberList = [];
+//   for (let number = start; number <= end; number++) {
+//     numberList.push(number);
+//   }
+//   return numberList;
+// };
+
+let range = (start, end, step) => {
+  let numberList = [];
+  for (let number = start; number <= end; ) {
     numberList.push(number);
+    if (step) {
+      number += step;
+    } else {
+      number++;
+    }
   }
   return numberList;
 };
